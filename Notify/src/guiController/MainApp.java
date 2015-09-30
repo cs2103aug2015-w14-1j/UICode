@@ -2,6 +2,7 @@ package guiController;
 
 import java.io.IOException;
 
+import view.TaskHandler;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -63,10 +64,25 @@ public class MainApp extends Application {
 			//set task view to centre of the root layout
 			rootLayout.setCenter(task);
 			
+			TaskHandler taskHandler = loader.getController();
+			taskHandler.setMain(this);
 		}catch(IOException e){
 			e.printStackTrace();
 		}
 	}
+	
+	
+	/**
+	 * Initializes the main JavaFX Stage with RootLayout being the main scene
+	 * 
+	 * @param primaryStage
+	 */
+	/*private void initPrimaryStage(Stage primaryStage){
+		this.primaryStage = primaryStage;
+		this.primaryStage.setTitle("Notify");
+		this.primaryStage.setScene(new Scene(rootLayout));
+		this.primaryStage.show();
+	}*/
 	
 	/**
 	 * Returns main stage

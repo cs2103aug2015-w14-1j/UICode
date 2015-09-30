@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TaskHandler">
    <children>
-      <TextField layoutX="14.0" layoutY="348.0" prefHeight="26.0" prefWidth="501.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TextField fx:id="txtCommand" layoutX="14.0" layoutY="348.0" onKeyPressed="#commandTextboxHandler" prefHeight="26.0" prefWidth="501.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Label alignment="CENTER" layoutX="283.0" layoutY="14.0" text="N O T I F Y" textFill="#1a9a92" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <ListView layoutX="200.0" layoutY="92.0" prefHeight="269.0" prefWidth="600.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Label alignment="CENTER" layoutX="283.0" layoutY="41.0" text="TASKS " textFill="#650b0b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TextArea fx:id="txtDisplay" editable="false" layoutX="186.0" layoutY="87.0" prefHeight="242.0" prefWidth="600.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0" />
    </children>
 </AnchorPane>
